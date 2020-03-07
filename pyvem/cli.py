@@ -14,7 +14,7 @@ Examples:
   pyvem create my_env
 Help:
   For help using this tool, please open an issue on the Github repository:
-  https://github.com/username/pyvem-cli
+  https://github.com/bsacash/pyvem
 """
 
 
