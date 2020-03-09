@@ -1,17 +1,30 @@
 """
 Usage:
-  pyvem create <name>
+  pyvem create [-p py | --python py] <name> 
   pyvem activate <name>
   pyvem deactivate
   pyvem list
   pyvem req
   pyvem -h | --help
   pyvem --version
+
 Options:
   -h --help                         Show this screen.
   --version                         Show version.
+
+Commands:
+  activate                          Activate an existing PyVEM virtual environment.
+  create                            Create a new PyVEM  virtual environment.
+  deactivate                        Deactivate a virtual environment.
+  list                              See all available PyVEM virtual environments.
+  req                               Create a requirments.txt file for the active PyVEM environment.
+
+Optional Arguments:
+  -p py, --python py                Target interpreter for which to create a virtual environment (either absolute path or identifier string) [default: python3].
+
 Examples:
-  pyvem create my_env
+  pyvem create -p python3 my_env
+
 Help:
   For help using this tool, please open an issue on the Github repository:
   https://github.com/bsacash/pyvem

@@ -17,16 +17,20 @@ class Create(Base):
             ]
 
         venv_name = self.options["<name>"]
+        python_interpreter = self.options["--python"]
+
         if venv_name in list_environments():
-            print(f"An environment with the name '{venv_name}' already exists.")
+            print("An environment with the name '{}' already exists.".format(venv_name))
         else:
             venv = os.path.join(self.path, venv_name)
             return_value = subprocess.run(
-                ["virtualenv", os.path.join(self.path, venv_name)]
+                [python_interpreter, "-m", "venv", os.path.join(self.path, venv_name)]
             )
             if return_value.returncode == 0:
-                print(f"Environment '{venv_name}' created successfully.")
+                print("Environment '{}' created successfully.".format(venv_name))
             else:
                 print(
-                    f"Environment could not be created. Return code: {return_value.returncode}"
+                    "Environment could not be created. Return code: {}".format(
+                        return_value.returncode
+                    )
                 )

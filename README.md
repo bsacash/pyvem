@@ -1,6 +1,6 @@
 # PyVEM
 
-The Python Virtual Enviroment Manager is a wrapper around the `virtualenv` library, providing a command line interface that better organizes Python environments. It provides quick access to the most commonly used aspects of virtual enviroments.
+The Python Virtual Enviroment Manager is a wrapper around the `venv` module, providing a command line interface that better organizes Python environments. It provides quick access to the most commonly used aspects of virtual enviroments.
 
 ## Getting Started
 ```
@@ -15,14 +15,17 @@ Create a new virtual environment.
 ```
 $ pyvem create my_env
 ```
+
 See all of your PyVEM environemnts.
 ```
 $ pyvem list
 ```
+
 Activate an environment.
 ```
 $ pyvem activate my_env
 ```
+
 Deactivate your environment
 ```
 $ pyvem deactivate
